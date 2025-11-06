@@ -19,7 +19,13 @@ def main():
     # --- character count ---
     char_counts = character_count(book_text)
     for char, count in char_counts.items():
-        print(f"t : {count}", f"p : {count}", f"c : {count}")
+        t_count = char_counts.get('t', 0)
+        p_count = char_counts.get('p', 0)
+        c_count = char_counts.get('c', 0)
 
+    print(f"'t': {t_count}")
+    print(f"'p': {p_count}")
+    print(f"'c': {c_count}")
+        
 
 main() 

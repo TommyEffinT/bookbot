@@ -23,7 +23,7 @@ def main():
     sorted_chars = sort_characters(char_counts)
     print("--------- Character Count -------")
     for char, count in char_counts.items(): 
-        e_count = char.counts.get('e', 0)
+        e_count = char_counts.get('e', 0)
         t_count = char_counts.get('t', 0) 
         print(f"'e': {e_count}")
         print(f"'t': {t_count}")

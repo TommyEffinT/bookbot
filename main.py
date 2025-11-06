@@ -22,8 +22,8 @@ def main():
     char_counts = character_count(book_text)
     sorted_chars = sort_characters(char_counts)
     print("--------- Character Count -------")
-    for char, count in sorted_chars:
-        print(f"{char} : {count}")
+    for i in sorted_chars:
+        print(f"{i[char]} : {i[count]}")
         # use print(f"{char} : {count}") to print every character and count
         # use for char, count in char_counts.items(): t_count = char_counts.get('t', 0) print(f"'t': {t_count}") for specific character count
 

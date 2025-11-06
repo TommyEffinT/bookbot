@@ -9,12 +9,13 @@ def main():
     # relative path, not home directory like shell/bash
     path_to_file = "books/frankenstein.txt"
     book_text = get_book_text(path_to_file)
-    
+
     # --- word count ---
     num_words = count_words(book_text) 
     print(f"Found {num_words} total words")
     # --- character count ---
-    for char, count in character_count.items():
+    char_counts = character_count(book_text)
+    for char, count in char_counts.items():
         print(f"{char}: {count}")
 
 

@@ -25,9 +25,8 @@ def main():
     for char, count in char_counts.items(): 
         e_count = char_counts.get('e', 0)
         t_count = char_counts.get('t', 0) 
-        print(f"'e': {e_count}")
-        print(f"'t': {t_count}")
-
+    print(f"'e': {e_count}")
+    print(f"'t': {t_count}")
 
 
         # print(f"{i['char']} : {i['count']}" for sorted character count)

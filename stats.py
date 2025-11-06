@@ -9,3 +9,12 @@ def character_count(file_contents):
         chars[c] = chars.get(c, 0) + 1 
     return chars
 # iterates over every word in text and populates blank dict with both char and count.
+
+def sort_characters(character_count):
+    chars_list = []
+    for char, count in character_count.items():
+        if char.isalpha():  # only include a-z
+           chars_list.append({"char":char, "count": count})
+# sort by descending order of count
+    chars_list.sort(reverse=True, key=lambda item: item["count"])
+    return chars_list

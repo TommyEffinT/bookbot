@@ -8,4 +8,4 @@ def main():
     book_text = get_book_text(path_to_file)
     print(book_text)
 
-    main()
+main()

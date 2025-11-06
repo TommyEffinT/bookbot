@@ -19,7 +19,7 @@ def main():
     # --- character count ---
     char_counts = character_count(book_text)
     for char, count in char_counts.items():
-        print(f"tpc : {count}")
+        print(f"t : {count}", f"p : {count}", f"c : {count}")
 
 
 main() 

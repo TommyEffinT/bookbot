@@ -6,12 +6,16 @@ def get_book_text(path):
 from stats import count_words, character_count
 
 def main():
-    path_to_file = "books/frankenstein.txt"
     # relative path, not home directory like shell/bash
+    path_to_file = "books/frankenstein.txt"
     book_text = get_book_text(path_to_file)
-    num_words = count_words(book_text)
+    
+    # --- word count ---
+    num_words = count_words(book_text) 
     print(f"Found {num_words} total words")
-    print(character_count)
+    # --- character count ---
+    for char, count in character_count.items():
+        print(f"{char}: {count}")
 
 
 main() 

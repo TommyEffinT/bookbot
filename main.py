@@ -5,14 +5,20 @@ def get_book_text(path):
 
 # imports functions from stats.py file
 from stats import count_words, character_count, sort_characters
+import sys
 
 def main():
 
-    # relative path, not home directory like shell/bash
-    path_to_file = "books/frankenstein.txt"
+    
+    if len(sys.argv)==2:
+        path_to_file = sys.argv[1]   # allows cli arguments    
+    else:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+        
     book_text = get_book_text(path_to_file)
     print("============ BOOKBOT ============")
-    print("Analyzing book found at books/frankenstein.txt...")
+    print(f"Analyzing book found at {path_to_file}...")
     # --- word count ---
     num_words = count_words(book_text) 
     print("----------- Word Count ----------")
